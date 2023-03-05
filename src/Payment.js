@@ -28,7 +28,7 @@ function Payment() {
             console.log({"Basket Total": getBasketTotal(basket)})
             const response = await axios({
                 method:'post',
-                url:`http://localhost:5000/payments/create?total=${getBasketTotal(basket)}`
+                url:`https://amazon-functions.onrender.com/payments/create?total=${getBasketTotal(basket)}`
             });
 
             console.log(response.data);
